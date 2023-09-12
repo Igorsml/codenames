@@ -1,0 +1,36 @@
+$widthBody: 80%;
+
+// colors
+$darkgrey: #434343;
+$orange: #fe5f1e;
+
+// margin & padding
+$marginTop1: 1em;
+
+// styles
+$borderRadius: 5px;
+$padding10: 10px;
+
+// hover
+$scaleSize: 1.1;
+$transitionHover: 0.2s linear;
+
+// mixins
+@mixin scale-item {
+  cursor: pointer;
+  transition: all $transitionHover;
+
+  &:hover {
+    scale: $scaleSize;
+  }
+}
+
+@mixin layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1260px;
+  max-width: 100%;
+  margin: 0 auto;
+}

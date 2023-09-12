@@ -1,0 +1,46 @@
+@import "../../_variables.scss";
+
+.header {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #434343;
+}
+
+.headerLayout {
+  display: flex;
+  width: inherit;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em auto;
+}
+
+.logoLayout {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  &:hover {
+    box-shadow: 4px 4px 35px 18px rgba(247, 65, 0, 0.35);
+  }
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  flex-grow: 1;
+}
+
+.layoutMaxWidth {
+  @include layout;
+}
