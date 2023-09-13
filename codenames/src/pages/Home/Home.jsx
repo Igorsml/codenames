@@ -5,7 +5,6 @@ import classes from "./Home.module.scss";
 
 export const Home = () => {
   const location = useLocation();
-  console.log("location:", location === "/");
 
   return (
     <div className={classes.layout}>
