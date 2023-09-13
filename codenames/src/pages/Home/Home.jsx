@@ -1,14 +1,20 @@
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
 import { Footer } from "../../components/Footer/Footer";
-import { Cards } from "../../components/Cards/Cards";
 import classes from "./Home.module.scss";
 
 export const Home = () => {
+  const location = useLocation();
+  console.log("location:", location === "/");
+
   return (
     <div className={classes.layout}>
       <Header />
-      <Cards />
+      {location.pathname === "/" && (
+        <NavLink to="/game" className={classes.gameLink}>
+          <button className={classes.startGameButton}>Start game</button>
+        </NavLink>
+      )}
       <main className={classes.main}>
         <Outlet />
       </main>

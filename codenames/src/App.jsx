@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home/Home";
+import { Cards } from "./components/Cards/Cards";
 import { Rules } from "./pages/Rules/Rules";
 import { Page404 } from "./pages/Page404/Page404";
 
@@ -10,6 +11,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />}>
         <Route path="/rules" element={<Rules />}></Route>
+        <Route path="/game" element={<Cards />}></Route>
         <Route path="*" element={<Page404 />}></Route>
       </Route>
     </Routes>
