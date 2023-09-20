@@ -41,6 +41,20 @@
   flex-grow: 1;
 }
 
+.navBarLink {
+  font-weight: 600;
+}
+
 .layoutMaxWidth {
   @include layout;
+}
+
+.socialIconLink {
+  @include scale-item;
+}
+
+.socialIcon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
 }

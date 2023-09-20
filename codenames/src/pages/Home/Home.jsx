@@ -1,6 +1,5 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
-import { Footer } from "../../components/Footer/Footer";
 import classes from "./Home.module.scss";
 
 export const Home = () => {
@@ -9,15 +8,14 @@ export const Home = () => {
   return (
     <div className={classes.layout}>
       <Header />
-      {location.pathname === "/" && (
-        <NavLink to="/game" className={classes.gameLink}>
-          <button className={classes.startGameButton}>Start game</button>
-        </NavLink>
-      )}
       <main className={classes.main}>
+        {location.pathname === "/" && (
+          <NavLink to="/game" className={classes.gameLink}>
+            <button className={classes.startGameButton}>Start game</button>
+          </NavLink>
+        )}
         <Outlet />
       </main>
-      <Footer />
     </div>
   );
 };
