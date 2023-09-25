@@ -49,12 +49,9 @@
   @include layout;
 }
 
-.socialIconLink {
-  @include scale-item;
-}
-
 .socialIcon {
   cursor: pointer;
   width: 50px;
   height: 50px;
+  @include scale-item;
 }

@@ -1,7 +1,11 @@
-import React from "react";
+import classes from "./Cards.module.scss";
 import { wordsList } from "../../wordsList";
 import { Card } from "../Card/Card";
-import classes from "./Cards.module.scss";
+
+const quantityRedTeamCard = 8;
+const quantityBlueTeamCard = 8;
+const quantityСiviliansCards = 8;
+const quantityKillerCards = 1;
 
 const limit = 25;
 wordsList.length = limit;
@@ -18,7 +22,7 @@ export const Cards = () => {
   return (
     <ul className={classes.cardsList}>
       {wordsList.map((word, index) => (
-        <Card key={index} value={word} />
+        <Card key={word + index} value={word} />
       ))}
     </ul>
   );
