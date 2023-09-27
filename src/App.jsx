@@ -6,6 +6,21 @@ import { Page404 } from "./pages/Page404/Page404";
 
 import "./App.css";
 
+const socket = new WebSocket("ws://localhost:3000");
+
+socket.onopen = () => {
+  console.log("Connected to server");
+  socket.send("Hello Server!");
+};
+
+socket.onmessage = (event) => {
+  console.log(`Received message from server: ${event.data}`);
+};
+
+socket.onclose = () => {
+  console.log("Disconnected from server");
+};
+
 function App() {
   return (
     <Routes>
