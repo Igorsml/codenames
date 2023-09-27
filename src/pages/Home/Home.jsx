@@ -1,5 +1,6 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { Header } from "../../components/Header/Header";
+import { WebSocket } from "../../components/WebSocket/WebSocket";
 import { TeamList } from "../../components/TeamList/TeamList";
 import classes from "./Home.module.scss";
 
@@ -9,6 +10,7 @@ export const Home = () => {
   return (
     <div className={classes.layout}>
       <Header />
+      <WebSocket />
       <main className={classes.main}>
         {location.pathname === "/" && (
           <>
