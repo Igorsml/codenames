@@ -1,17 +1,15 @@
 import { useState, useEffect } from "react";
 import classes from "./Cards.module.scss";
 import { Card } from "../Card/Card";
+import axios from "axios";
 
-export const Cards = () => {
+export const CardsList = () => {
   const [words, setWords] = useState([]);
 
   useEffect(() => {
-    async function fetchWords() {
-      const DTO = await fetch("http://localhost:3000/cards");
-      const words = await DTO.json();
-      setWords(words);
-    }
-    fetchWords();
+    axios.get("http://localhost:3000/cards").then((response) => {
+      setWords(response.data);
+    });
   }, []);
 
   return (

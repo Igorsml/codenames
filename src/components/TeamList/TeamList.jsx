@@ -1,10 +1,6 @@
 import React from "react";
 import classes from "./TeamList.module.scss";
 
-const quantityTeamCard = 8;
-const quantityСiviliansCards = 8;
-const quantityKillerCards = 1;
-
 export const TeamList = () => {
   return (
     <div className={classes.teamList}>
