@@ -26,7 +26,6 @@ $transitionHover: 0.2s linear;
 
 // mixins
 @mixin scale-item {
-  cursor: pointer;
   transition: all $transitionHover;
 
   &:hover {

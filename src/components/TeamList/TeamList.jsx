@@ -12,14 +12,6 @@ export const TeamList = () => {
         <button className={classes.joinRedTeam}>Стать красным</button>
         <ul>
           <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
-          <li>Red Player</li>
         </ul>
       </div>
       <div className={classes.blueTeam}>
@@ -29,13 +21,6 @@ export const TeamList = () => {
         <hr />
         <button className={classes.joinBlueTeam}>Стать синим</button>
         <ul>
-          <li>Blue Player</li>
-          <li>Blue Player</li>
-          <li>Blue Player</li>
-          <li>Blue Player</li>
-          <li>Blue Player</li>
-          <li>Blue Player</li>
-          <li>Blue Player</li>
           <li>Blue Player</li>
         </ul>
       </div>

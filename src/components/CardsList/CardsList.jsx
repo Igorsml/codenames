@@ -1,21 +1,18 @@
-import { useState, useEffect } from "react";
 import classes from "./Cards.module.scss";
 import { Card } from "../Card/Card";
-import axios from "axios";
+import { GetCards } from "../../services/CardsService/GetCards";
 
-export const CardsList = () => {
-  const [words, setWords] = useState([]);
-
-  useEffect(() => {
-    axios.get("http://localhost:3000/cards").then((response) => {
-      setWords(response.data);
-    });
-  }, []);
-
+export const CardsList = (props) => {
   return (
-    <ul className={classes.cardsList}>
-      {words &&
-        words.map((word, index) => <Card key={word + index} value={word} />)}
-    </ul>
+    <>
+      <p>Игрок 1: {localStorage.nickname}</p>
+      <p>Игрок 2: {props.enemyName}</p>
+      <ul className={classes.cardsList}>
+        {GetCards() &&
+          GetCards().map((word, index) => (
+            <Card key={word + index} value={word} />
+          ))}
+      </ul>
+    </>
   );
 };

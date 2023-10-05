@@ -23,6 +23,13 @@
   flex-grow: 3;
 }
 
+.formAuth {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
 .gameLink {
   margin: 0 auto;
 }
@@ -30,8 +37,37 @@
 .startGameButton {
   background-color: $orange;
   color: #fff;
-  width: 500px;
-  font-size: 30px;
+  padding: 1rem 2rem;
+  font-size: 22px;
   text-align: center;
   @include scale-item;
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.3;
+    cursor: no-drop;
+  }
+}
+
+.gameId {
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.playerNickname {
+  width: 30vw;
+  height: 5vh;
+  border-radius: 0.3em;
+  padding: 1em;
+  margin-right: 1em;
+  font-size: 1em;
+  outline: none;
+  caret-color: $orange;
+
+  &:focus {
+    filter: drop-shadow(0 0 0.4rem $orange);
+  }
 }

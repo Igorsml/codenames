@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../../assets/images/logo.jpg";
 import classes from "./Header.module.scss";
-import Telegram from "../../assets/icons/telegram.svg";
-import Github from "../../assets/icons/githubWhite.svg";
+import { Logo } from "../../assets";
+import { Telegram } from "../../assets";
+import { Github } from "../../assets";
 
 export const Header = () => {
   return (
