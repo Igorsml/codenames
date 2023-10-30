@@ -1,6 +1,35 @@
+@import "../../variables.scss";
+
+.teamBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
 .teamList {
   display: flex;
   align-items: self-start;
   justify-content: space-between;
-  gap: 150px;
+  gap: 30px;
+}
+
+.joinMaster {
+  display: flex;
+  gap: 10px;
+}
+
+.red {
+  color: $red;
+}
+
+.blue {
+  color: $blue;
+}
+
+.joinRedTeam {
+  background-color: $red;
+}
+
+.joinBlueTeam {
+  background-color: $blue;
 }
